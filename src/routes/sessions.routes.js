@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport({
     service:'gmail',
     port:587,
     auth:{
-        user:config.GMAIL_APP_PASS,
+        user:config.GMAIL_APP_USER,
         pass:config.GMAIL_APP_PASS
     }
 })
@@ -93,22 +93,21 @@ router.post('/pplogin', verifyRequiredBody(['email','password']), passport.authe
 
 router.post('/changePassword', async(req,res) =>{
     try{
-        const email = req.body
-        const verifyEmail = await controller.getOne(email)
+        const {email} = req.body
+        const verifyEmail = await controller.getOne({ email: email })
         console.log(verifyEmail)
+        
         if(!verifyEmail){
             res.status(401).send({ origin: config.SERVER, payload: 'el correo ingresado no corresponde a un correo vinculado a una cuenta  ' })
         }else{
             const confirmation = await transport.sendMail({
                 from:` propietario de la pagina <${config.GMAIL_APP_USER}`,
-                to:`${email}`,
+                to:email,
                 subject: 'cambio de contraseña ',
-                html:'<a href="/nueva contraseña"> cambiar contraseña </a>'
+                html:'<a> cambiar contraseña </a>'
             })
-                res.status(200).send({status:"ok", data: confirmation})
-                res.redirect('/sentMail')
+            res.redirect('/sentMail')    
         }
-
     }catch(err){
         res.status(500).send({ origin: config.SERVER, payload: null, error: err.message})
     }
