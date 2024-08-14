@@ -1,0 +1,32 @@
+<header id="headerProducts">
+    <h1 class="titulo1" id="productsTitulo1">Productos</h1>
+    <a href="/profile" id="miPerfilEnlace"> mi perfil</a>
+    <h3 id="h3Products">{{user._doc.firstName}} {{user._doc.lastName}}</h3>
+</header>
+<div id="productsBody">
+    <div id="productsBox">
+        {{#each data.docs}}
+        <div class="box" id="itemBox" >
+            <div id="nameAndDescription">
+                <h4 class="titulo1" id="itemProductsTitulo1">{{this.nombre}}</h4>
+                <p id="productDescription">{{this.descripcion}}</p>
+            </div>
+            <div id="priceAndBtn">
+                <p id="price">${{this.precio}}</p>
+                <button class="btn" id="addCartBtn">agregar al carrito</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div id="containerBtnPagginate">
+        {{#if data.prevPage}}
+        <a class="btnPagginate" href="/products/{{data.prevPage}}"><</a>
+        {{/if}}
+        
+        
+        
+        {{#if data.nextPage}}
+        <a  class="btnPagginate" href="/products/{{data.nextPage}}">></a>
+        {{/if}}
+    </div>
+</div>

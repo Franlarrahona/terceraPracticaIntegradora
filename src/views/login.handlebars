@@ -1,0 +1,18 @@
+<div id="loginBody">
+    <div class="box" id="loginBox">
+        <h1 class="titulo1" id="loginTitulo1"> Login</h1>
+    
+            <form id="loginForm" action="/api/sessions/login" method="post">
+                <input class="inputs" id="LoginInputs" type="email" name="email" placeholder="Email" required="required">
+                <input class="inputs" id="LoginInputs" type="password" name="password" required="required" placeholder="contraseña">
+                <button class="btn" id= "loginBtn" type="submit">Ingresar</button>
+            </form> 
+    </div>        
+        <div id="noTenesCuentaBox">
+            No tenes cuenta?: <a id="loginA" href="/register">Registrate aqui</a>
+        </div>
+        <div id="noContraseña">
+            olvidaste tu contraseña ? <a id="loginA" href="/CambioDePassword">cambia tu contraseña</a>
+        </div>
+    
+</div>

@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(54, 54, 54);
+}
+
+/*botones*/
+
+.btn{
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+}
+.btn:hover{
+    background-color: rgb(194, 194, 194);
+}
+
+#loginBtn{
+    margin-bottom: 50px;
+    margin-top: 20px;
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+#loginBtn:hover{
+    background-color: rgb(4, 131, 209);
+}
+
+#addCartBtn{
+    background-color: rgb(0, 157, 255);
+    font-size: 15px;
+    width: 75px;
+    height: 40px;
+    border-radius: 0.7em;
+}
+#addCartBtn:hover{
+    background-color: rgb(4, 131, 209);
+
+}
+
+.btnPagginate{
+    text-decoration: none;
+    color:rgb(0, 157, 255) ;
+    background-color: rgb(54, 54, 54) ;
+    font-size: 50px;
+    margin-left: 20px;
+    margin-right:20px ;
+}
+.btnPagginate:hover{
+    color: rgb(4, 131, 209)
+}
+
+#btnLogout{
+    background-color: red;
+    border-radius: 0.7em;
+    font-size: 18px;
+    border: 0;
+}
+
+#btnLogout:hover{
+    background-color: rgb(137, 0, 0);
+}
+#changeBtn{
+    
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+#changeBtn:hover{
+    background-color: rgb(4, 131, 209);
+}
+/*inputs*/
+
+.inputs{
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 0.7em;
+    padding-right: 3px;
+    padding-left: 3px ;
+}
+#LoginInputs{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 30px;
+    color: white;
+}
+#registerInputs{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 30px;
+    color: white;
+}
+#registerSelect{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 30px;
+    color: white;
+    border: 0px;
+}
+#changeInput{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
+/*Boxs*/
+
+.box{
+    background-color: rgb(19, 19, 19);;
+    border-radius: 0.7em;
+}
+
+#loginBox{
+    margin-top: 150px;
+    width: 30%;
+    
+}
+#registerBox{
+    margin-top: 120px;
+    width: 30%;
+}
+#productsBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#itemBox{
+    width: 260px;
+    height: 300px;
+    margin: 15px;
+}
+#profileBox1{
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 0.7em;
+    margin-left: 40px;
+    margin-top: 60px;
+    padding: 20px;
+}
+#changeBox{
+    margin-top: 150px;
+    width: 30%;
+}
+
+#sentBox{
+    margin-top: 150px;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+/*titulos*/
+
+.titulo1{
+font-family: "Anton", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+#loginTitulo1{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#registerTitulo1{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#productsTitulo1{
+    color: white;
+    font-size: 30px;
+    background-color:rgb(19, 19, 19) ;
+    text-align: center;
+    padding: 15px;
+}
+#itemProductsTitulo1{
+    color: white;
+    background-color:  rgb(19, 19, 19);
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+    border-radius: 0.7em;
+    margin-bottom: 12px;
+}
+#profileTitulo1{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+#changeTitulo1{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+/*bodys*/
+
+#loginBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#registerBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#productsBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#changeBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+/*forms*/
+
+#loginForm{
+    background-color: rgb(19, 19, 19);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.7em;
+}
+
+#registerForm{
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.7em;
+}
+#profileForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#changeForm{
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: center;
+    border-radius: 0.7em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+/*enlaces*/
+
+#noTenesCuentaBox{
+    margin-top: 20px;
+}
+#TenesCuentaBox{
+    margin-bottom: 20px;
+    background-color: rgb(19, 19, 19);
+    color: white
+}
+#loginA{
+    color: rgb(0, 157, 255) ;
+}
+#registerA{
+    color: rgb(0, 157, 255) ;
+    background-color: rgb(19, 19, 19);
+
+}
+#miPerfilEnlace{
+    background-color:rgb(0, 157, 255);
+    text-decoration: none;
+    border-radius: 0.7em;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    
+}
+#noContraseña{
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+
+/*headers*/
+#headerProducts{
+    background-color: rgb(19, 19, 19);
+    padding-bottom: 15px;
+}
+
+
+
+/*contenido items productos*/
+
+#nameAndDescription{
+    background-color: rgb(19, 19, 19);
+    border-radius: 0.7em;
+}
+
+#productDescription{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 190px;
+}
+#priceAndBtn{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+}
+#price{
+    background-color: rgb(19, 19, 19);
+    font-size: 30px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width: 150px;
+}
+
+/*text*/
+.profileText{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    display: inline;
+    border-radius: 0.7em;
+    margin-bottom: 20px;
+}
+#detallesProfileText{
+    text-align: center;
+    font-size: 30px;
+}
+#changeText{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+#sentText{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/**/
+
+#h3Products{
+    color: white;
+    background-color:rgb(19, 19, 19) ;
+    display: inline;
+}
+
+#

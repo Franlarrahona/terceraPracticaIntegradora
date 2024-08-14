@@ -1,0 +1,19 @@
+<header>
+<h1 class="titulo1" id="profileTitulo1"> Mi perfil</h2>
+</header>
+<div>
+    <div class="box" id="profileBox1">
+        <h2 class="profileText" id="detallesProfileText"> detalles </h2>
+        <h2 class="profileText" id="">nombre: {{user._doc.firstName}}</h2>
+        <h2 class="profileText" id="">apellido: {{user._doc.lastName}}</h2>
+        <h2 class="profileText" id="">email: {{user._doc.email}}</h2>
+    </div>
+    <div>
+
+    </div>
+</div>
+<div>
+<form id="profileForm" action="/api/sessions/logout" method="get">
+    <button class="btn" id="btnLogout" type="submit"> salir </button>
+</form>
+</div>

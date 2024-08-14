@@ -1,0 +1,19 @@
+<div id="registerBody">
+    <div class="box" id="registerBox">
+        <h2 class="titulo1" id="registerTitulo1">Registro</h2>
+        <form id="registerForm" action='/api/sessions/register' method="post">
+                <input class="inputs" id="registerInputs" type="text" name="firstName" placeholder="Nombre" required="required" autocomplete="nombre">
+                <input class="inputs" id="registerInputs" type="text" name='lastName' placeholder="Apellido" required="required" autocomplete="apellido">
+                <input class="inputs" id="registerInputs" type="email" name="email" placeholder="Email" required="required" autocomplete="email" >
+                <input class="inputs" id="registerInputs" type="password" name="password" placeholder="Contraseña" required="required"  autocomplete="password">
+                <select  class="input" id="registerSelect" name="gender">
+                    <option value="female"> femenino</option>
+                    <option value="male"> masculino</option>
+                </select>
+                <button class="btn" id= "loginBtn" type="submit">Registrarse</button>
+                <div id="TenesCuentaBox" >
+                    Ya tenés cuenta? <a id="registerA" href="/login">Ingresá</a>
+                </div>
+        </form>
+    </div>
+</div>
