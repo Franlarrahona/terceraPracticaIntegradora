@@ -7,6 +7,7 @@ import UsersController from "../controllers/user.controller.js";
 import initAuthStrategies from "../auth/passport.strategies.js";
 import nodemailer from 'nodemailer';
 
+
 const router = Router();
 const controller = new UsersController();
 const transport = nodemailer.createTransport({
@@ -94,6 +95,8 @@ router.post('/pplogin', verifyRequiredBody(['email','password']), passport.authe
 router.post('/changePassword', async(req,res) =>{
     try{
         const {email} = req.body
+        req.session.email = email
+        res.send(email)
         const verifyEmail = await controller.getOne({ email: email })
         console.log(verifyEmail)
         
@@ -104,10 +107,26 @@ router.post('/changePassword', async(req,res) =>{
                 from:` propietario de la pagina <${config.GMAIL_APP_USER}`,
                 to:email,
                 subject: 'cambio de contraseña ',
-                html:'<a> cambiar contraseña </a>'
+                html:'<a href="http://localhost:5050/nuevaPassword">cambiar contraseña</a>'
             })
-            res.redirect('/sentMail')    
+            req.session.save(err => {
+                if (err) return res.status(500).send({ origin: config.SERVER, payload: null, error: err.message });
+
+                res.redirect('/sentMail')
+            });
+                
         }
+    }catch(err){
+        res.status(500).send({ origin: config.SERVER, payload: null, error: err.message})
+    }
+})
+
+router.post('/newPassword', async(req,res) =>{
+    try{
+        const {password} = req.body;
+        const email = req.session.email
+        console.log(email);
+
     }catch(err){
         res.status(500).send({ origin: config.SERVER, payload: null, error: err.message})
     }

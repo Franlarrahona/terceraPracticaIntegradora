@@ -47,5 +47,8 @@ router.get('/cambioDePassword', (req,res) =>{
 router.get('/sentMail', (req,res) =>{
     res.render('sentmail',{})
 })
+router.get('/nuevaPassword', (req,res) =>{
+    res.render('newPassword',{})
+})
 
 export default router
